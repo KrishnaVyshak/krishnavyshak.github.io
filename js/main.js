@@ -1,8 +1,3 @@
-/* ===================================================================
- * Ethos 1.0.0 - Main JS
- *
- * ------------------------------------------------------------------- */
-
 (function($) {
 
     "use strict";
@@ -333,3 +328,17 @@
     })();
 
 })(jQuery);
+
+var keys = [];
+    var konami = '38,38,40,40,37,39,37,39,66,65';
+    
+    $(document).keydown(function(e){
+        
+        keys.push( e.keyCode );
+        if ( keys.toString().indexOf( konami ) >=0 ){
+            
+            keys = [];
+            
+            $('.empty').html("<img src='http://gamingshogun.com/wp-content/uploads/2012/02/KONAMI-00.png' width='100' height='100'>"); 
+        }
+    });
