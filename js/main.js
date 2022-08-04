@@ -340,5 +340,6 @@ var keys = [];
             keys = [];
             
             $('.empty').html("<img src='http://gamingshogun.com/wp-content/uploads/2012/02/KONAMI-00.png' width='100' height='100'>"); 
+            document.getElementById('fear').innerText = "I'm the kind of person who isn't afraid of anything except Santhosh Sir"
         }
     });
