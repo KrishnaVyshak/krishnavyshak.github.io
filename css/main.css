@@ -3463,3 +3463,33 @@ html.no-csstransitions .hero-content {
   margin-left: 5px;
 
 }
+
+.book-banner {
+  padding: 40px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border: 0.5px solid rgb(222, 222, 222);
+  margin-bottom: 50px;
+  margin-top: 70px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(auto, 38%) 1fr 3em;
+}
+
+@media screen and (max-width: 1064px) {
+  .book-banner {
+    padding: 20px;
+  }
+  .book-cover-img {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 1064px) {
+  .book-banner {
+    padding: 30px;
+  }
+  .book-cover-img {
+    width: 300px;
+  }
+}
