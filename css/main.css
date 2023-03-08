@@ -290,6 +290,56 @@ pre {
   font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
+.specialborder {
+  border: 1.2px solid;
+  /* border-image: linear-gradient(var(--angle), #FF0089, #D100FF, #006FFF, #05FFCD, #FF8832, #FF00E5) 1; */
+  --angle: 0deg;
+  border-radius: 99px;
+}
+
+.special {
+ 
+  padding: 12px;
+  padding-left: 22px;
+  padding-right: 22px;
+  /* border: 1px solid #939393; */
+  font-size: large;
+  border-radius: 999px;
+	background: linear-gradient(-45deg, #FF0089, #D100FF, #006FFF, #05FFCD, #FF8832, #FF00E5);
+	background-size: 400% 400%;
+	animation: gradient 16s ease infinite;
+	height: 100vh;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
 pre {
   padding: 2.4rem 3.2rem 3.2rem;
   background: #efefef;
