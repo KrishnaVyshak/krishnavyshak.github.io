@@ -290,15 +290,8 @@ pre {
   font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
-.specialborder {
-  border: 1.2px solid;
-  /* border-image: linear-gradient(var(--angle), #FF0089, #D100FF, #006FFF, #05FFCD, #FF8832, #FF00E5) 1; */
-  --angle: 0deg;
-  border-radius: 99px;
-}
 
 .special {
- 
   padding: 12px;
   padding-left: 22px;
   padding-right: 22px;
