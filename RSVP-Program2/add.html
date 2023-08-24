@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Program</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500;600;700&family=Manrope:wght@500&display=swap');
+    * {
+        font-family: 'Hepta Slab', serif;
+
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvdX90CSfOlLZ0sr4kxPrU7XlaBdhM8pMa7A&usqp=CAU");
+      /* background-size: 100% 100%; Stretch the image to cover the container */
+      background-repeat: repeat;
+      /* padding: 40px;
+      border-radius: 10px; */
+      background-blend-mode:color-burn;
+      color: #ffffff;
+    }
+
+    .container {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvdX90CSfOlLZ0sr4kxPrU7XlaBdhM8pMa7A&usqp=CAU");
+      /* background-size: 100% 100%; Stretch the image to cover the container */
+      background-repeat: repeat;
+      padding: 40px;
+      border-radius: 10px;
+      background-blend-mode:color-burn;
+      color: #ffffff;
+    }
+
+    .list-group-item {
+      background-color: transparent;
+      border: none;
+    }
+
+    .title-bar {
+      /* background-color: #333; */
+      color: rgb(255, 255, 0);
+      text-align: center;
+      padding: 10px;
+      background-repeat: no-repeat;
+        background-size: 100%;
+        backdrop-filter: blur(10);
+      /* background-image: url("title.jpg"); */
+      background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.468)), url("title.jpg");
+    }
+
+
+    @media screen and (min-width: 600px) {
+        .container {
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+        }
+        
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-top: 25px;
+
+    }
+
+    
+    input[type=text]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid #d4af37;
+        border-radius: 4px;
+        background-color: #f8f8f803;
+        backdrop-filter: blur(2px);
+        color: #ffffff;
+        font-size: 18px;
+        /* Placeholder color */
+        
+    }
+
+    input[type=text]::placeholder {
+            color: #ffffff;
+        }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #ab8300;
+        color: #ffffff;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    input[type=submit]:hover {
+        background-color: #d4af37;
+    }
+
+    input[type=file] {
+        width: 85%;
+        background-color: #ab8300;
+        color: #ffffff;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        /* cursor: pointer; */
+        font-size: 18px;
+    }
+
+    .box {
+        background-color: #f8f8f803;
+        backdrop-filter: blur(2px);
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  padding: 4px;
+  padding-left: 18px;
+    padding-right: 18px;
+  box-shadow: 0px 0px 10px rgba(123, 116, 38, 0.598);
+    }
+
+    .profile {
+        width: 80px;
+        height: 80px;
+        /* Fill the image */
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+    
+    <div class="title-bar">
+        <h3>NAVAL STATION EZHIMALA<br>ONAM CELEBRATION 2023</h3>
+      </div>
+  <div class="container mt-4">
+    <h2>Add a program</h2>
+    <div class="box">
+    <form>
+        <input type="text" id="title" placeholder="Title / Name" required>
+        <input type="text" id="time" placeholder="Time">
+        <!-- File upload -->
+        <h5>Image</h5>
+        <h6 id="upload1"></h6>
+        <input type="file" id="img" accept="image/*">
+        <h5>Audio</h5>
+        <h6 id="upload2"></h6>
+        <input type="file" id="audio" accept="audio/*">
+        <input type="submit" value="Submit" onclick="submitForm()">
+
+    </form>
+</div>
+  </div>
+
+  <!--- Creat a js function to add new list items to the list group from firebase database -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <!-- "https://www.gstatic.com/firebasejs/3.7.4/firebase.js"> -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBeEP1vV2IOigtWBr30gC1mmZ3kcpp1UJs",
+            authDomain: "splitmz.firebaseapp.com",
+            databaseURL: "https://splitmz-default-rtdb.firebaseio.com",
+            projectId: "splitmz",
+            storageBucket: "splitmz.appspot.com",
+            messagingSenderId: "296131101444",
+            appId: "1:296131101444:web:54a74812c1df1c89d94651" 
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const dbRef = firebase.database().ref();
+        const usersRef = dbRef.child('program');
+        var list = document.getElementById("list");
+        var imgUrl = "";
+        var audioUrl = "";
+
+        usersRef.on("child_added", snap => {
+            var li = document.createElement("li");
+            if (snap.child("time").val() !== null) {
+                if (snap.child("img").val() === null) {
+                
+                var template = "<div class='box'><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4></div>";
+                li.innerHTML = template;
+                } else {
+                    var template = "<div class='box'><img class='profile' src='" + snap.child("img").val() + "' alt=''><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4></div>";
+                    li.innerHTML = template;
+                }
+                var list = document.getElementById("list");
+                list.appendChild(li);
+            }
+            else {
+                if (snap.child("img").val() === null) {
+                    var template = "<div class='box'><h3>" + snap.child("event").val() + "</h3></div>";
+                    li.innerHTML = template;
+                    } else {
+                        var template = "<div class='box'><img class='profile' src='" + snap.child("img").val() + "' alt=''><h3>" + snap.child("event").val() + "</h3></div>";
+                        li.innerHTML = template;
+                    }
+            }
+        });
+
+        const imgInput = document.getElementById("img");
+        imgInput.addEventListener("change", uploadImage);
+
+        const audioInput = document.getElementById("audio");
+        audioInput.addEventListener("change", uploadAudio);
+
+
+function uploadImage() {
+      const ref = firebase.storage().ref();
+      const file = document.getElementById("img").files[0];
+      const name = +new Date() + "-" + file.name;
+      const metadata = {
+         contentType: file.type
+      };
+      const task = ref.child(name).put(file, metadata);task
+      .then(snapshot => snapshot.ref.getDownloadURL())
+      .then(url => {
+      imgUrl = url;
+
+      console.log(imgUrl);
+      document.getElementById("upload1").innerHTML = "Done Upload";
+      // alert('image uploaded successfully');
+   })
+   .catch(console.error);
+   }
+
+function uploadAudio() {
+
+    const ref = firebase.storage().ref();
+    const file = document.getElementById("audio").files[0];
+    const name = +new Date() + "-" + file.name;
+    const metadata = {
+
+        contentType: file.type
+    };
+    const task = ref.child(name).put(file, metadata);task
+    .then(snapshot => snapshot.ref.getDownloadURL())
+    .then(url => {
+    audioUrl = url;
+
+    console.log(audioUrl);
+    document.getElementById("upload2").innerHTML = "Done Upload";
+    // alert('image uploaded successfully');
+  })
+  .catch(console.error);
+  }
+
+        function submitForm() {
+        
+            var title = document.getElementById("title").value;
+            var time = document.getElementById("time").value;
+
+            var newProgram = usersRef.child(title);
+
+      
+            newProgram.set({
+                event: title,
+                time: time,
+                img: imgUrl,
+                audio: audioUrl
+            })
+            
+
+        }
+
+    </script>
+</body>
+</html>

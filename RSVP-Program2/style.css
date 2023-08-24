@@ -1,0 +1,29 @@
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    }
+  .stroke {
+    stroke-width: 2;
+    stroke-dasharray: 500 0;
+    animation: dasharray 4s;
+    stroke: #000000;
+    fill: none;
+    }
+  .fill {
+    fill-opacity: 0;
+    animation: fill 2s ease 4s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes dasharray {
+    0% {
+      stroke-dasharray: 0 500;
+    }
+  }
+  @keyframes fill {
+    from { fill-opacity: 0; }
+    to { fill-opacity: 1; }
+  }

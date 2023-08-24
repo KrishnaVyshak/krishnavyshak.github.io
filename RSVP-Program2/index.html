@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Image Example</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500;600;700&family=Manrope:wght@500&display=swap');
+    * {
+        font-family: 'Hepta Slab', serif;
+
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvdX90CSfOlLZ0sr4kxPrU7XlaBdhM8pMa7A&usqp=CAU");
+      /* background-size: 100% 100%; Stretch the image to cover the container */
+      background-repeat: repeat;
+      /* padding: 40px;
+      border-radius: 10px; */
+      background-blend-mode:color-burn;
+      color: #ffffff;
+    }
+
+    .container {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvdX90CSfOlLZ0sr4kxPrU7XlaBdhM8pMa7A&usqp=CAU");
+      /* background-size: 100% 100%; Stretch the image to cover the container */
+      background-repeat: repeat;
+      padding: 40px;
+      border-radius: 10px;
+      background-blend-mode:color-burn;
+      color: #ffffff;
+    }
+
+    .list-group-item {
+      background-color: transparent;
+      border: none;
+    }
+
+    .title-bar {
+      /* background-color: #333; */
+      color: rgb(255, 255, 0);
+      text-align: center;
+      padding: 10px;
+      background-repeat: no-repeat;
+        background-size: 100%;
+        backdrop-filter: blur(10);
+      /* background-image: url("title.jpg"); */
+      background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.468)), url("title.jpg");
+    }
+
+
+    @media screen and (min-width: 600px) {
+        .container {
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+        }
+        
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-top: 25px;
+
+    }
+
+    
+
+    .box {
+        background-color: #f8f8f803;
+        backdrop-filter: blur(2px);
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  padding: 4px;
+  padding-left: 18px;
+    padding-right: 18px;
+  box-shadow: 0px 0px 10px rgba(123, 116, 38, 0.598);
+    }
+
+    .profile {
+        width: 80px;
+        height: 80px;
+        /* Fill the image */
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+    
+    <div class="title-bar">
+        <h3>NAVAL STATION EZHIMALA<br>ONAM CELEBRATION 2023</h3>
+      </div>
+  <div class="container mt-4">
+    <h2>Minute to Minute Program</h2>
+    <ul class="list-group" id="list">
+      
+    </ul>
+  </div>
+
+  <!--- Creat a js function to add new list items to the list group from firebase database -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBeEP1vV2IOigtWBr30gC1mmZ3kcpp1UJs",
+            authDomain: "splitmz.firebaseapp.com",
+            databaseURL: "https://splitmz-default-rtdb.firebaseio.com",
+            projectId: "splitmz",
+            storageBucket: "splitmz.appspot.com",
+            messagingSenderId: "296131101444",
+            appId: "1:296131101444:web:54a74812c1df1c89d94651" 
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const dbRef = firebase.database().ref();
+        const usersRef = dbRef.child('program');
+        var list = document.getElementById("list");
+        usersRef.on("child_added", snap => {
+            var li = document.createElement("li");
+            if (snap.child("img").val() === null) {
+              
+            var template = "<div class='box'><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4></div>";
+            li.innerHTML = template;
+            } else {
+                var template = "<div class='box'><img class='profile' src='" + snap.child("img").val() + "' alt=''><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4></div>";
+                li.innerHTML = template;
+            }
+            var list = document.getElementById("list");
+            list.appendChild(li);
+        });
+
+    </script>
+</body>
+</html>
