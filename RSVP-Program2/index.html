@@ -126,11 +126,12 @@
         var list = document.getElementById("list");
         usersRef.on("child_added", snap => {
             var li = document.createElement("li");
-            if (snap.child("img").val() === null) {
+            if (snap.child("img").val() === null || snap.child("img").val() === "") {
               
             var template = "<div class='box'><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4></div>";
             li.innerHTML = template;
-            } else {
+            
+          } else {
                 var template = "<div class='box'><img class='profile' src='" + snap.child("img").val() + "' alt=''><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4></div>";
                 li.innerHTML = template;
             }
