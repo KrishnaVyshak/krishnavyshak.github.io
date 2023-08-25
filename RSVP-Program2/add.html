@@ -264,7 +264,7 @@ function uploadAudio() {
             var title = document.getElementById("title").value;
             var time = document.getElementById("time").value;
 
-            var newProgram = usersRef.child(title);
+            var newProgram = usersRef.push();
 
       
             newProgram.set({
