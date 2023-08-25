@@ -92,6 +92,11 @@
         border-radius: 50%;
         margin-top: 16px;
     }
+
+    audio {
+        width: 100%;
+        margin-top: 16px;
+    }
   </style>
 </head>
 <body>
@@ -127,12 +132,22 @@
         usersRef.on("child_added", snap => {
             var li = document.createElement("li");
             if (snap.child("img").val() === null || snap.child("img").val() === "") {
-              
-            var template = "<div class='box'><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4></div>";
+            if (snap.child("audio").val() === null || snap.child("audio").val() === "") {
+                var nestedTemplate = "</div>";
+                } else {
+                var nestedTemplate = "<audio controls='' name='media'><source type='audio/mpeg' src='" + snap.child("audio").val() + "'></video></div>";
+                }
+
+            var template = "<div class='box'><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4>" + nestedTemplate;
             li.innerHTML = template;
             
           } else {
-                var template = "<div class='box'><img class='profile' src='" + snap.child("img").val() + "' alt=''><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4></div>";
+            if (snap.child("audio").val() === null || snap.child("audio").val() === "") {
+                var nestedTemplate = "</div>";
+                } else {
+                var nestedTemplate = "<audio controls='' name='media'><source type='audio/mpeg' src='" + snap.child("audio").val() + "'></video></div>";
+                }  
+                var template = "<div class='box'><img class='profile' src='" + snap.child("img").val() + "' alt=''><h3>" + snap.child("time").val() + "</h3><h4 style='font-weight: 400;'>" + snap.child("event").val() + "</h4>" + nestedTemplate;
                 li.innerHTML = template;
             }
             var list = document.getElementById("list");
