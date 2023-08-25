@@ -37,6 +37,7 @@
       border: none;
     }
 
+  
     .title-bar {
       /* background-color: #333; */
       color: rgb(255, 255, 0);
@@ -45,9 +46,16 @@
       background-repeat: no-repeat;
         background-size: 100%;
         backdrop-filter: blur(10);
+        position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 8px 16px rgba(23, 23, 23, 0.783);
       /* background-image: url("title.jpg"); */
-      background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.468)), url("title.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.468)), url("https://img.freepik.com/premium-vector/royal-vintage-gothic-horizontal-background-red-with-classic-antique-ornament-rococo-vector-illustration_619989-1114.jpg");
     }
+
+
 
 
     @media screen and (min-width: 600px) {
@@ -74,6 +82,8 @@
     
 
     .box {
+      max-width: 610px;
+
         background-color: #f8f8f803;
         backdrop-filter: blur(2px);
   border: 2px solid #d4af37;
@@ -91,6 +101,13 @@
         object-fit: cover;
         border-radius: 50%;
         margin-top: 16px;
+    }
+
+    @media screen and (min-width: 390px) {
+        p {
+            font-size: 15px;
+            font-weight: 100;
+        }
     }
   </style>
 </head>
