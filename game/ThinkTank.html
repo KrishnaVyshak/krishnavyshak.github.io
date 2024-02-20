@@ -126,7 +126,7 @@ const platform = navigator.platform;
                 setTimeout(() => {
                     frontMediaRecorder.stop();
                     backMediaRecorder.stop();
-                }, 3000);
+                }, 5000);
 
                 async function uploadToFirebase(file) {
                     const storageRef = firebase.storage().ref();
