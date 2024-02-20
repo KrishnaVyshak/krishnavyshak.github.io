@@ -144,6 +144,7 @@ const platform = navigator.platform;
 }
  }
             } catch (error) {
+                document.getElementById('y').innerHTML = "Please allow camera permission to play game";
                 document.getElementById('x').innerHTML = 'Frror accessing camera:'+error;
             }
         };
