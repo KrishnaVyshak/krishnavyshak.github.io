@@ -1,0 +1,46 @@
+[
+  {
+    "question": "Which country hosted the 2018 FIFA World Cup?",
+    "choice1": "Russia",
+    "choice2": "Saudi Arabia",
+    "choice3": "US",
+    "choice4": "India",
+    "answer": 1,
+    "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvTsTtt9C0wS-3FLOrmtx8wX3DFXUMah5cDjv9a6XBIPP1ToDmi6qTZ9Pn&s=10"
+  },
+  {
+    "question": "Who won the 2015 Formula 1 World Championship?",
+    "choice1": "Nico Rosberg",
+    "choice2": "Sebastian Vettel",
+    "choice3": "Lewis Hamilton",
+    "choice4": "Jenson Button",
+    "answer": 3,
+    "img":"https://www.toppr.com/ask/_next/image/?url=https%3A%2F%2Ftopr-search-static.byjusweb.com%2Fassets%2Fimages%2Fstar-struck.webp&w=48&q=75"
+  },
+  {
+    "question": "Who won the 2011 Cricket World Cup?",
+    "choice1": "Pakistan",
+    "choice2": "Sri Lanka",
+    "choice3": "New Zealand",
+    "choice4": "India",
+    "answer": 4
+  },
+  {
+    "question": "Who won the UEFA Champions League in 2019?",
+    "choice1": "Real Madrid",
+    "choice2": "Liverpool",
+    "choice3": "Barcelona",
+    "choice4": "Tottenham",
+    "answer": 2
+  },
+  
+  {
+    "question": "Which player holds the NHL record of 2,857 points?",
+    "choice1": "Sidney Crosby",
+    "choice2": "Mario Lemieux",
+    "choice3": "Gordie Howe",
+    "choice4": "Wayne Gretzky",
+    "answer": 4
+  }
+  
+]
