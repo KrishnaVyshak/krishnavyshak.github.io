@@ -1,46 +1,82 @@
 [
   {
-    "question": "Which country hosted the 2018 FIFA World Cup?",
-    "choice1": "Russia",
-    "choice2": "Saudi Arabia",
-    "choice3": "US",
-    "choice4": "India",
-    "answer": 1,
-    "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvTsTtt9C0wS-3FLOrmtx8wX3DFXUMah5cDjv9a6XBIPP1ToDmi6qTZ9Pn&s=10"
-  },
-  {
-    "question": "Who won the 2015 Formula 1 World Championship?",
-    "choice1": "Nico Rosberg",
-    "choice2": "Sebastian Vettel",
-    "choice3": "Lewis Hamilton",
-    "choice4": "Jenson Button",
-    "answer": 3,
-    "img":"https://www.toppr.com/ask/_next/image/?url=https%3A%2F%2Ftopr-search-static.byjusweb.com%2Fassets%2Fimages%2Fstar-struck.webp&w=48&q=75"
-  },
-  {
-    "question": "Who won the 2011 Cricket World Cup?",
-    "choice1": "Pakistan",
-    "choice2": "Sri Lanka",
-    "choice3": "New Zealand",
-    "choice4": "India",
+    "question": "Which keyword is used to create a function in Python?",
+    "choice1": "func",
+    "choice2": "define",
+    "choice3": "lambda",
+    "choice4": "def",
     "answer": 4
   },
   {
-    "question": "Who won the UEFA Champions League in 2019?",
-    "choice1": "Real Madrid",
-    "choice2": "Liverpool",
-    "choice3": "Barcelona",
-    "choice4": "Tottenham",
+    "question": "What is the output of the expression `2 ** 3` in Python?",
+    "choice1": "5",
+    "choice2": "8",
+    "choice3": "6",
+    "choice4": "9",
     "answer": 2
   },
-  
   {
-    "question": "Which player holds the NHL record of 2,857 points?",
-    "choice1": "Sidney Crosby",
-    "choice2": "Mario Lemieux",
-    "choice3": "Gordie Howe",
-    "choice4": "Wayne Gretzky",
+    "question": "Which of the following data types is immutable in Python?",
+    "choice1": "list",
+    "choice2": "set",
+    "choice3": "dictionary",
+    "choice4": "tuple",
     "answer": 4
+  },
+  {
+    "question": "Which of the following methods is used to add an item to a list in Python?",
+    "choice1": "insert()",
+    "choice2": "append()",
+    "choice3": "extend()",
+    "choice4": "add()",
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is a valid variable name in Python?",
+    "choice1": "2variable",
+    "choice2": "variable_1",
+    "choice3": "variable-1",
+    "choice4": "variable 1",
+    "answer": 2
+  },
+  {
+    "question": "What will be the output of the following code: `print('Hello' * 3)`?",
+    "choice1": "HelloHelloHello",
+    "choice2": "Hello 3 times",
+    "choice3": "Hello, Hello, Hello",
+    "choice4": "Hello 3",
+    "answer": 1
+  },
+  {
+    "question": "Which of the following statements is used to exit a loop prematurely in Python?",
+    "choice1": "continue",
+    "choice2": "break",
+    "choice3": "pass",
+    "choice4": "exit",
+    "answer": 2
+  },
+  {
+    "question": "What does the following code snippet do: `if not x:`?",
+    "choice1": "Checks if x is None",
+    "choice2": "Checks if x is not True",
+    "choice3": "Checks if x is False or 0 or empty",
+    "choice4": "Checks if x is a negative number",
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is the correct syntax for a list comprehension in Python?",
+    "choice1": "[x for x in range(5)]",
+    "choice2": "{x for x in range(5)}",
+    "choice3": "(x for x in range(5))",
+    "choice4": "[x in range(5)]",
+    "answer": 1
+  },
+  {
+    "question": "Which function is used to open a file in Python?",
+    "choice1": "open()",
+    "choice2": "file()",
+    "choice3": "read()",
+    "choice4": "load()",
+    "answer": 1
   }
-  
 ]
