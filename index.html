@@ -65,7 +65,17 @@
 <body id="top">
 
 
-   
+    <!-- preloader
+    ================================================== -->
+   <!--- <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+--->
+
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -80,8 +90,13 @@
     
             <nav class="row header-nav-wrap">
                 <ul class="header-nav">
-                    <li><a class="smoothscroll" href="#hero" title="Intro">Vanished.</a></li>
-                    </ul>
+                    <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="About">About</a></li>
+                    <li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
+                    <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li>
+                    <li><a href="mailto:contact@krish.studio" title="Contact us">Say Hello</a></li>
+                    <li><div class="specialborder"><a class="special" href="https://blog.vyshak.me" title="Personal Blog">Blog</a></div></li>
+                </ul>
             </nav> <!-- end header-nav-wrap -->
 
             <!-- <a href="#0" class="btn btn--stroke btn--small">Download CV</a> -->
@@ -103,14 +118,298 @@
                 <div class="empty"></div>
 
                 <h1>
-                Vanished.
+                Hello, I'm Krishnavyshak, <br>
+                a full-stack developer <br>
+                & Ui/Ux designer currently <br>
+                based on India.
                 </h1>
 
-                
+                <ul class="hero-social">
+                    <li><a href="https://twitter.com/Krishnavyshakr">Twitter</a></li>
+                    <li><a href="https://github.com/KrishnaVyshak">Github</a></li>
+                    <li><a href="https://www.instagram.com/krishnavyshakr/">Instagram</a></li>
+                   
+                </ul> <!-- end hero-social -->
+
             </div> 
 
         </div> <!-- end hero-content -->
-<script src="js/main.js"></script>
 
-</body>
-</html>
+        <div class="hero-scroll">
+            <a href="#about" class="scroll-link smoothscroll">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 24l-8-9h6v-15h4v15h6z"/></svg>
+            </a>
+        </div> <!-- end hero-scroll -->
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        
+        
+        <div class="s-about__section s-about__section--profile">
+
+            <div class="right-vert-line"></div>
+
+            <div class="row">
+                <div class="column large-6 medium-8 tab-full">
+            
+                    <div class="section-intro" data-num="01" data-aos="fade-up">
+                        <h3 class="subhead">About Me</h3>
+                        <h1 id='fear' class="display-1">I'm the kind of person who isn't afraid of challenges.</h1>
+                    </div>
+
+                    <div class="profile-pic" data-aos="fade-up">
+                        <img id="profile-pic" src="images/profile-pic.jpg" 
+                             srcset="images/profile-pic.jpg 1x, images/profile-pic.jpg 2x" alt="">
+                    </div>
+
+                    <h3 data-aos="fade-up">Profile</h3>
+
+                    <p data-aos="fade-up">
+                        I am a self-taught full-stack app developer and UI/UX designer currently based in India. I have a passion for creating beautiful and functional mobile applications for both Android and iOS. I have a strong background in app development and have worked on multiple projects. I am a self-motivated individual who is always looking for new challenges and opportunities. I am currently working on a online Tictactoe game with Firebase in React Native for iOS and Android.
+                    </p>
+
+                </div>
+            </div>
+
+        </div> <!-- end s-about__section--profile -->
+        
+        <div class="s-about__section">
+
+            <div class="row">
+                <div class="column">
+                    <h3 data-aos="fade-up">Timeline</h3>
+                </div>
+            </div>
+
+            <div class="row block-large-1-2 block-900-full work-positions">
+
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">MACHINE LEARNING</span>
+                                <span class="position__pos">Natural Language Processing</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                Present
+                            </div>
+                        </div>
+
+                        <p>
+                        Deeply learning the core concepts of Natural Language Processing, what it is, how it works and how to use it to solve real world problems. After completing this course, I will be able to make use of NLP in my Artificial Intelligence projects. 
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">BACKEND</span>
+                                <span class="position__pos">PostgreSQL & Golang</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                December 2021
+                            </div>
+                        </div>
+                        <p>
+                            Completed learning postgreSQL Administration, triggers and Database Design. Partially completed learning Golang and created a small backend application using it. 
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">DESIGNING</span>
+                                <span class="position__pos">Mobile app Ui designing</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                August 2021
+                            </div>
+                        </div>
+
+                        <p>
+                        Completed learing Ui designing for mobile apps using Figma. I have also completed a course on Flutter and its Ui designing. Now I have a strong foundation in Ui designing.
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">BACKEND</span>
+                                <span class="position__pos">Python</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                September 2020
+                            </div>
+                        </div>
+
+                        <p>
+                        Learned advanced concepts in Python like Data visualization, Data Structures, Algorithms, Data Science and Machine Learning.
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+
+            </div> <!-- work positions -->
+
+        </div> <!-- end s-about__section -->
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services target-section h-dark-bg">
+        
+        <div class="row s-services__content">
+
+            <div class="vert-line"></div>
+
+            <div class="column large-6 s-services__leftcol">
+                <div class="section-intro" data-num="02" data-aos="fade-up">
+                    <h3 class="subhead">Expertise</h3>
+
+                    <h1 class="display-1">
+                    I focus on crafting modern mobile applications and designs.
+                    </h1>
+                </div>
+
+                <p class="lead" data-aos="fade-up">
+                    I am a full-stack app developer and have a strong background in app development and design. I have worked on multiple projects and have a strong background in web development. I am a self-motivated individual who is always looking for new challenges and opportunities.
+                </p>
+            </div> <!-- end  s-services--leftcol -->
+
+            <div class="column large-6">
+                <ul class="services-list" data-aos="fade-up">
+                    <li class="services-list__item is-active">
+                        <div class="services-list__item-header">
+                            <h5>Product Design</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                            I am well versed in the latest trends in product design. I have worked on multiple projects and have a strong background in product design.
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Branding</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                            Branding of mobile applications is a very important part of the design process. I know how to create a brand that is unique and memorable for the user and can have a positive impact on the user.
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>Frontend Development</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                            I know many frameworks and libraries to create modern mobile applications that are user friendly and easy to use. I have experience in React Native, Flutter and native mobile app development. 
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>UX Research</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                            I know the theory behind user experience and how to create a user centered design. I have experience in conducting user research and conducting usability tests. The results of these tests are very important to the design process.
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                    <li class="services-list__item">
+                        <div class="services-list__item-header">
+                            <h5>UI Design</h5>
+                        </div>
+                        <div class="services-list__item-body">
+                            <p>
+                            UI desinging of mobile applications is well familiar to me. I have experience in designing Ui for mobile applications. I have a strong background in Ui design with Figma. 
+                            </p>
+                        </div>
+                    </li> <!-- services-list__item -->
+                </ul> <!-- end services-list -->
+            </div>
+
+        </div> <!-- s-services__content -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- portfolio
+    ================================================== -->
+    <section id="portfolio" class="s-portfolio target-section">
+
+        <div class="row s-portfolio__header">
+            <div class="column large-6 medium-8 tab-full">
+                <div class="section-intro" data-num="03" data-aos="fade-up">
+                    <h3 class="subhead">Portfolio</h3>
+                    <h1 class="display-1">
+                        A selection of recent projects I have worked on.
+                    </h1>
+                </div>
+            </div>
+        </div> <!-- s-porfolio__header -->
+        
+        <div class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
+            
+            <div class="column" data-aos="fade-up">
+                
+                
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/bookbyai.jpg" title="20 ADVENTUROUS STORIES BY A.I." data-size="1050x700">
+                            <img src="images/portfolio/bookly.jpg" 
+                                 srcset="images/portfolio/bookbyai.jpg 1x, images/portfolio/bookbyai.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Artificial Intelligence</div>
+                        <h4 class="folio-item__title">Book</h4>
+                    </div>
+                    <a href="https://krishnavyshak.gumroad.com/l/aistory1" target="_blank" title="Project Link" class="folio-item__project-link">View Book</a>
+                    <div class="folio-item__caption">
+                        <p>20 Classical adventure stories written by AI</p>
+                    </div>
+                </div>
+            </div>
+             <!--  -->
+             <div class="column" data-aos="fade-up">
+                
+                
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/curium.jpg" title="CURIUM" data-size="1050x700">
+                            <img src="images/portfolio/curium.jpg" 
+                                 srcset="images/portfolio/curium.jpg 1x, images/portfolio/curium.jpg 2x" alt="">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Android</div>
+                        <h4 class="folio-item__title">CURIUM</h4>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>An app to monitor students exam results</p>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            
+            <!--  -->
+            <div class="column" data-aos="fade-up">
+                
+                
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/portfolio/snap_it.jpg" title="Snap It" data-size="1050x700">
+                            <img src="images/portfolio/snap_it.jpg" 
+                                 sr
