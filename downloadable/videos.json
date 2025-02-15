@@ -1,11 +1,22 @@
 {
   "videos": [
-      {
-        "title": "Latent episode 1",
-        "duration": "43:00",
-        "thumbnail": "",
-        "src": "https://download1526.mediafire.com/ocj2knhe6gfgK0FgLaCHISYPylNdPvN04C81J124i7Qwi_HgxZBPBFUIegsmdFWbOcjzlawlpegksJN-zE3UQGQ8Zc9jXkYPaCwiU2ttWIAEWW_HZTsF28KBNkjKaqDsgLl6qzc5KnmvMWy7QJUeLXrhEwufkHfV43fa7gXOiZXjBQ/rkzzq0phcz7wxle/INDIA%5C%27S_GOT_LATENT_%EF%BD%9C_EP_01_ft_%40raftaarmusic_1080p30fps_.mp4"
-      }
+    {
+      "title": "Intro to React Native",
+      "duration": "10:15",
+      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/intro-react-native-thumbnail.jpg",
+      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+    },
+    {
+      "title": "Understanding Components",
+      "duration": "12:30",
+      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/components-thumbnail.jpg",
+      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+    },
+    {
+      "title": "State and Props in React",
+      "duration": "8:45",
+      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/state-props-thumbnail.jpg",
+      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+    }
   ]
 }
-    
