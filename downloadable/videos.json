@@ -1,76 +1,108 @@
 {
-  "videos": [
+  "episodes": [
     {
-      "title": "Intro to React Native",
-      "duration": "10:15",
-      "thumbnail": "https://bsmedia.business-standard.com/_media/bs/img/article/2025-02/10/full/1739176033-6998.jpg?im=FeatureCrop,size=(826,465)",
-      "src": "https://download1526.mediafire.com/bnn54miea61gz5M1sUQGPNb7UooRuweLQadREvNoj9dU1c3TAKI4mhNNPag6R5U1WJRiBHC14VwdPlcXMDcw24gY7Dq81_EHvg1IHWXAToQu-uj03rd77oDW14jK-4VWSV9OczPfe0csoG8KzePZSyQDViFCE9x7OO1bdG2Eu7_rgQ/rkzzq0phcz7wxle/INDIA%5C%27S_GOT_LATENT_%EF%BD%9C_EP_01_ft_%40raftaarmusic_1080p30fps_.mp4"
-    },
-    {
-      "title": "Understanding Components",
-      "duration": "12:30",
-      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/components-thumbnail.jpg",
-      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+      "title": "Raghu Ram Episode Bonus Moments",
+      "duration": "N/A",
+      "release_date": "Mon, Nov 18, 2024",
+      "guests": ["Raghu", "Tanmay", "Sid warrior"],
+      "rating": "9.7",
+      "src": "N/A"
     },
     {
-      "title": "State and Props in React",
-      "duration": "8:45",
-      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/state-props-thumbnail.jpg",
-      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
-    },
-     {
-      "title": "Intro to React Native",
-      "duration": "10:15",
-      "thumbnail": "https://bsmedia.business-standard.com/_media/bs/img/article/2025-02/10/full/1739176033-6998.jpg?im=FeatureCrop,size=(826,465)",
-      "src": "https://download1526.mediafire.com/bnn54miea61gz5M1sUQGPNb7UooRuweLQadREvNoj9dU1c3TAKI4mhNNPag6R5U1WJRiBHC14VwdPlcXMDcw24gY7Dq81_EHvg1IHWXAToQu-uj03rd77oDW14jK-4VWSV9OczPfe0csoG8KzePZSyQDViFCE9x7OO1bdG2Eu7_rgQ/rkzzq0phcz7wxle/INDIA%5C%27S_GOT_LATENT_%EF%BD%9C_EP_01_ft_%40raftaarmusic_1080p30fps_.mp4"
+      "title": "Episode #1.4: Hilarious Critique with Maheep, Neeti, Amit",
+      "duration": "N/A",
+      "release_date": "Sun, Aug 11, 2024",
+      "guests": ["Maheep", "Neeti", "Amit"],
+      "rating": "9.4",
+      "src": "N/A"
     },
     {
-      "title": "Understanding Components",
-      "duration": "12:30",
-      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/components-thumbnail.jpg",
-      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+      "title": "Episode #1.1: Featuring Raftaar and Sahil",
+      "duration": "N/A",
+      "release_date": "Fri, Jun 14, 2024",
+      "guests": ["Raftaar", "Sahil"],
+      "rating": "8.8",
+      "src": "N/A"
     },
     {
-      "title": "State and Props in React",
-      "duration": "8:45",
-      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/state-props-thumbnail.jpg",
-      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
-    },
-     {
-      "title": "Intro to React Native",
-      "duration": "10:15",
-      "thumbnail": "https://bsmedia.business-standard.com/_media/bs/img/article/2025-02/10/full/1739176033-6998.jpg?im=FeatureCrop,size=(826,465)",
-      "src": "https://download1526.mediafire.com/bnn54miea61gz5M1sUQGPNb7UooRuweLQadREvNoj9dU1c3TAKI4mhNNPag6R5U1WJRiBHC14VwdPlcXMDcw24gY7Dq81_EHvg1IHWXAToQu-uj03rd77oDW14jK-4VWSV9OczPfe0csoG8KzePZSyQDViFCE9x7OO1bdG2Eu7_rgQ/rkzzq0phcz7wxle/INDIA%5C%27S_GOT_LATENT_%EF%BD%9C_EP_01_ft_%40raftaarmusic_1080p30fps_.mp4"
+      "title": "Episode #1.2: Featuring Anshu, Nishant, Karan Singh",
+      "duration": "N/A",
+      "release_date": "Mon, Jul 8, 2024",
+      "guests": ["Anshu", "Nishant", "Karan Singh"],
+      "rating": "9.0",
+      "src": "N/A"
     },
     {
-      "title": "Understanding Components",
-      "duration": "12:30",
-      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/components-thumbnail.jpg",
-      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+      "title": "Episode #1.3: Featuring Aashish, Urfi, Yashraj",
+      "duration": "N/A",
+      "release_date": "Sun, Jul 28, 2024",
+      "guests": ["Aashish", "Urfi", "Yashraj"],
+      "rating": "9.3",
+      "src": "N/A"
     },
     {
-      "title": "State and Props in React",
-      "duration": "8:45",
-      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/state-props-thumbnail.jpg",
-      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
-    },
-     {
-      "title": "Intro to React Native",
-      "duration": "10:15",
-      "thumbnail": "https://bsmedia.business-standard.com/_media/bs/img/article/2025-02/10/full/1739176033-6998.jpg?im=FeatureCrop,size=(826,465)",
-      "src": "https://download1526.mediafire.com/bnn54miea61gz5M1sUQGPNb7UooRuweLQadREvNoj9dU1c3TAKI4mhNNPag6R5U1WJRiBHC14VwdPlcXMDcw24gY7Dq81_EHvg1IHWXAToQu-uj03rd77oDW14jK-4VWSV9OczPfe0csoG8KzePZSyQDViFCE9x7OO1bdG2Eu7_rgQ/rkzzq0phcz7wxle/INDIA%5C%27S_GOT_LATENT_%EF%BD%9C_EP_01_ft_%40raftaarmusic_1080p30fps_.mp4"
+      "title": "Episode #1.5: Featuring Kunal, Atul",
+      "duration": "N/A",
+      "release_date": "Mon, Aug 26, 2024",
+      "guests": ["Kunal", "Atul"],
+      "rating": "8.7",
+      "src": "N/A"
     },
     {
-      "title": "Understanding Components",
-      "duration": "12:30",
-      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/components-thumbnail.jpg",
-      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+      "title": "Episode #1.6: Featuring Vipul, Nishant, Sonali",
+      "duration": "N/A",
+      "release_date": "Sun, Sep 15, 2024",
+      "guests": ["Vipul", "Nishant", "Sonali"],
+      "rating": "9.1",
+      "src": "N/A"
     },
     {
-      "title": "State and Props in React",
-      "duration": "8:45",
-      "thumbnail": "https://www.reactnative.expert/wp-content/uploads/2020/02/state-props-thumbnail.jpg",
-      "src": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+      "title": "Episode #1.7: Featuring Ravi, Rahgir, Saurabh",
+      "duration": "N/A",
+      "release_date": "Wed, Oct 2, 2024",
+      "guests": ["Ravi", "Rahgir", "Saurabh"],
+      "rating": "8.8",
+      "src": "N/A"
+    },
+    {
+      "title": "Episode #1.8: Featuring Poonam, Vivek, Sagar, Vidit",
+      "duration": "N/A",
+      "release_date": "Sun, Oct 13, 2024",
+      "guests": ["Poonam", "Vivek", "Sagar", "Vidit"],
+      "rating": "8.9",
+      "src": "N/A"
+    },
+    {
+      "title": "Episode #1.9: Featuring Deepak, Manan, Agu Stanley",
+      "duration": "N/A",
+      "release_date": "Thu, Oct 31, 2024",
+      "guests": ["Deepak", "Manan", "Agu Stanley"],
+      "rating": "8.8",
+      "src": "N/A"
+    },
+    {
+      "title": "Episode #1.10: Featuring Raghu, Tanmay, Sid warrior",
+      "duration": "N/A",
+      "release_date": "Sat, Nov 16, 2024",
+      "guests": ["Raghu", "Tanmay", "Sid warrior"],
+      "rating": "9.4",
+      "src": "N/A"
+    },
+    {
+      "title": "Episode #1.11: Featuring Bharti, Harsh, Tony",
+      "duration": "N/A",
+      "release_date": "Sun, Dec 8, 2024",
+      "guests": ["Bharti", "Harsh", "Tony"],
+      "rating": "9.2",
+      "src": "N/A"
+    },
+    {
+      "title": "Episode #1.12: Featuring Rakhi, Ashish, Yashraj",
+      "duration": "N/A",
+      "release_date": "Tue, Dec 31, 2024",
+      "guests": ["Rakhi", "Ashish", "Yashraj"],
+      "rating": "N/A",
+      "src": "N/A"
     }
   ]
 }
