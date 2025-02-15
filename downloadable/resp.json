@@ -1,5 +1,5 @@
 {
-  "status":'"fatal",
+  "status":"fatal",
   "msg": "This is a special announcement regarding the app.",
   "title": "Important Update!",
   "src": "https://example.com/update-details"
