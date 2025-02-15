@@ -1,21 +1,6 @@
 {
   "episodes": [
-    {
-      "title": "Raghu Ram Episode Bonus Moments",
-      "duration": "N/A",
-      "release_date": "Mon, Nov 18, 2024",
-      "guests": ["Raghu", "Tanmay", "Sid warrior"],
-      "rating": "9.7",
-      "src": "N/A"
-    },
-    {
-      "title": "Episode #1.4: Hilarious Critique with Maheep, Neeti, Amit",
-      "duration": "N/A",
-      "release_date": "Sun, Aug 11, 2024",
-      "guests": ["Maheep", "Neeti", "Amit"],
-      "rating": "9.4",
-      "src": "N/A"
-    },
+  
     {
       "title": "Episode #1.1: Featuring Raftaar and Sahil",
       "duration": "N/A",
@@ -38,6 +23,14 @@
       "release_date": "Sun, Jul 28, 2024",
       "guests": ["Aashish", "Urfi", "Yashraj"],
       "rating": "9.3",
+      "src": "N/A"
+    },
+      {
+      "title": "Episode #1.4: Hilarious Critique with Maheep, Neeti, Amit",
+      "duration": "N/A",
+      "release_date": "Sun, Aug 11, 2024",
+      "guests": ["Maheep", "Neeti", "Amit"],
+      "rating": "9.4",
       "src": "N/A"
     },
     {
