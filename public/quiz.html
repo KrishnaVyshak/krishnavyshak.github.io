@@ -218,14 +218,59 @@
         .exp-box { background: var(--bg-base); border: 1px solid var(--border-color); padding: 20px; border-radius: var(--radius-sm); margin-top: 24px; font-size: 0.95rem; color: var(--text-muted); }
         .exp-box strong { color: var(--text-main); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        @media (max-width: 900px) {
-            #exam-screen { flex-direction: column; overflow-y: auto; }
-            .left-panel { overflow-y: visible; border-right: none; }
-            .right-panel { width: 100%; border-top: 1px solid var(--border-color); }
-            .action-bar { flex-direction: column; align-items: stretch; gap: 16px; }
-            .action-group { flex-wrap: wrap; justify-content: space-between; width: 100%; }
-            .action-group .btn { flex: 1; text-align: center; }
-        }
+       @media (max-width: 900px) {
+    body {
+        overflow: auto; /* Allow the whole page to scroll on mobile */
+        height: auto;
+    }
+
+    #exam-screen {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+    }
+
+    .left-panel {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .right-panel {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .palette-grid {
+        grid-template-columns: repeat(6, 1fr); /* Slightly more columns for mobile */
+        max-height: 300px; /* Prevent it from being too long */
+    }
+
+    .action-bar {
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .action-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .action-group .btn {
+        flex: 1;
+        padding: 10px;
+        font-size: 0.75rem;
+    }
+
+    /* Ensure the submit area is always accessible at the bottom */
+    .submit-area {
+        padding: 30px 24px;
+        background: var(--bg-panel);
+    }
+}
     </style>
 </head>
 <body>
